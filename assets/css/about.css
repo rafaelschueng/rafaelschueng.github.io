@@ -1,0 +1,32 @@
+:root {
+    /* **colors** */
+    --dark-bg-color:#001319;
+    --light-bg-color:#004d66;
+    --medium-bg-color:#002f40;
+    --dark-red-color:#cc0014;
+    --light-red-color:#cc0052;
+    --dark-yellow-color:#f2f224;
+    --medium-yellow-color:#FFFF66;
+    --light-yellow-color:#fffff2;
+    --light-green-color:#00ff8c;
+    --light-blue-color:#1885DA;
+    --white-color:#ffffff;
+}
+
+body {
+  background-color:var(--medium-yellow-color);
+  color:var(--medium-bg-color);
+}
+
+::selection {
+  background-color: var(--medium-bg-color);
+  color: var(--medium-yellow-color);
+}
+
+#main { }
+
+#About-Banner {}
+
+#presentation .col {
+  display: none;
+}
