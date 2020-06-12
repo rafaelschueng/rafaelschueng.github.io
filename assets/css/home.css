@@ -13,10 +13,27 @@
   --white-color:#ffffff;
   /* **backgrounds** */
   --background-image-main:url("../images/backgrounds/background_new.svg");
+  /* **fonts** */
+  --desktop-font-size: 13px;
+  --mobile-font-size: 9px;
 }
 
 ::selection {
   background-color: var(--medium-bg-color);
+}
+
+/*Responsive Media Queries*/
+
+@media only screen and (min-width: 800px) {
+  #secondary {
+    padding: 0;
+    transform: rotate(-45deg) scale(1.5);
+  }
+  #logo { 
+    height: 60vh;
+    width: auto; 
+  }
+  
 }
 
 @keyframes BackgroundAnimationLeft {
@@ -43,22 +60,22 @@
   }
 }
 
+html {
+  overflow: hidden;
+}
 
 body {
   background-color:var(--dark-bg-color);
   color:var(--light-yellow-color);
-  overflow: hidden;
+  font-size: var(--desktop-font-size);
 }
 
-#main { 
+#main {
+  overflow: hidden;
   position:absolute;
   z-index: 300;
 }
 
-#secondary {
-  padding: 0;
-  transform: rotate(-45deg) scale(1.5);
-}
 
 #secondary > div:nth-child(1){
   position: relative;
@@ -100,7 +117,10 @@ body {
   animation-iteration-count: infinite;
 }
 
-#logo { height:40vh; }
+#logo { 
+  height: 60vh;
+  width: 60vw; 
+}
 
 #top-bar {
   position: absolute;
@@ -129,13 +149,6 @@ body {
 #left-bar li:nth-child(1) {
   writing-mode: vertical-lr;
   line-height: 1;
-}
-
-#left-bar li:nth-child(2) {
-  height: 60px;
-  background-color: var(--light-yellow-color);
-  width: 2px;
-  margin: 10px auto;
 }
 
 #go-to-blog {

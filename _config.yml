@@ -22,12 +22,17 @@ github_page: "https://github.com/rafaelschueng"
 title: "Rafael Schüng"
 email: "rschueng@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-    "Desenvolvedor, Entusiasta e apaixonado por computação."
+    Desenvolvedor, Entusiasta e apaixonado por computação.
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rafaelschueng.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+twitter_username: RafaelSchueng
+github_username:  rafaelschueng
+
+github_link: "https://github.com/rafaelschueng"
+linkedin_link: "https://linkedin.com/in/rafael-schueng"
+twitter_link: "https://twitter.com/RafaelSchueng"
 
 #Configuration of path structure
 permalink: /:title/
