@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Bem Vindo ao Meu Blog"
+title:  "Bem Vindo ao Jekyll"
 date:   2020-05-16 09:25:19 -0300
 categories: jekyll update
-related_image: ./assets/post/images/2433830.jpg
+related_image: ./assets/post/images/2018-09-11-img-blog-site-jekyll-1024x576.png
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Você encontrará esta postagem no diretório "_posts". Vá em frente, edite-o e recrie o site para ver suas alterações. Você pode reconstruir o site de várias maneiras diferentes, mas a maneira mais comum é executar o `jekyll serve`, que inicia um servidor da Web e gera novamente o site automaticamente quando um arquivo é atualizado.
 
 Jekyll requires blog post files to be named according to the following format:
 
