@@ -13,8 +13,7 @@
     --light-blue-color:#1885DA;
     --white-color:#ffffff;
     /* **fonts** */
-    --desktop-font-size: 13px;
-    --mobile-font-size: 9px;
+    --default-font-size: 16px;
     /* **Paddings and margins** */
     --default-padding: 5px 25px;
     /* **Backgrounds** */
@@ -25,7 +24,7 @@ body {
   background-color:var(--medium-yellow-color);
   background-position: center;
   color:var(--medium-bg-color);
-  font-size: var(--desktop-font-size);
+  font-size: var(--default-font-size);
   font-family: 'Titillium Web', sans-serif;
   overflow: hidden;
 }
@@ -109,4 +108,8 @@ a:link {
 #Footer a {
   font-size: 32px;
 
+}
+
+@media screen and (min-width: 800px) and (min-height: 600px) {
+  
 }

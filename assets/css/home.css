@@ -14,8 +14,7 @@
   /* **backgrounds** */
   --background-image-main:url("../../assets/images/backgrounds/vlcsnap-2020-06-16-12h43m28s487.png");
   /* **fonts** */
-  --desktop-font-size: 13px;
-  --mobile-font-size: 9px;
+  --default-font-size: 16px;
   /* **default padding** */
   --default-padding:20px 20px;
   /* ** z-index ** */
@@ -71,7 +70,7 @@ body {
 #main-background {
   background-image: var(--background-image-main);
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   top: 0;
@@ -112,7 +111,7 @@ body {
 #blog-post-related-image {
   position: absolute;
   background-repeat: no-repeat;
-  background-size:auto 100%;
+  background-size:cover;
   background-position: center;
   background-color: var(--medium-bg-color);
   filter: blur(1px) brightness(40%);
@@ -171,10 +170,7 @@ body {
   #main-background {
     background-image: var(--background-image-main);
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
-  }
-  #blog-post-related-image {
-    background-size: 100% auto;
   }
 }

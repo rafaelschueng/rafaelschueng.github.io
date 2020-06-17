@@ -1,0 +1,81 @@
+:root {
+  /* **colors** */
+  --dark-bg-color:#001319;
+  --light-bg-color:#004d66;
+  --medium-bg-color:#002f40;
+  --dark-red-color:#cc0014;
+  --light-red-color:#cc0052;
+  --dark-yellow-color:#f2f224;
+  --medium-yellow-color:#FFFF66;
+  --light-yellow-color:#fffff2;
+  --light-green-color:#00ff8c;
+  --light-blue-color:#1885DA;
+  --white-color:#ffffff;
+  /* **backgrounds** */
+  --background-image-main:url("../../assets/images/backgrounds/vlcsnap-2020-06-16-12h43m28s487.png");
+  /* **fonts** */
+  --default-font-size: 16px;
+  /* **default padding** */
+  --default-padding:0 10vw;
+  /* ** z-index ** */
+  --default-main-z-index:1000;
+}
+
+::selection {
+  background-color: var(--medium-bg-color);
+}
+
+body {
+  background-color:var(--medium-bg-color);
+  color:var(--light-yellow-color);
+  font-size: var(--default-font-size);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#post-logo {
+  height:64px;
+}
+
+#post-logo path {
+  fill: var(--light-yellow-color);
+}
+
+#post-image img {
+  position: relative;
+  height: 70vh;
+  z-index: 2000;
+}
+
+#post-image-background {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  z-index: 1000;
+  filter: blur(1px) brightness(80%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#post-text header {
+  margin:15px 0px;
+  padding:10px 0 0 0;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+#post-text {
+  position: relative;
+  z-index: 2000;
+  background-color: var(--medium-bg-color);
+}
+
+
+@media screen and (min-width: 800px) and (min-height: 600px) {
+  #post-text {
+    padding:var(--default-padding);
+  }
+  #post-navbar {
+    padding:var(--default-padding);
+  } 
+}
