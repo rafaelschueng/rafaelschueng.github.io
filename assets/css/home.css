@@ -57,7 +57,7 @@ html {
 
 body {
   background-color:var(--dark-bg-color);
-  color:var(--light-yellow-color);
+  color:var(--white-color);
   font-size: var(--desktop-font-size);
   font-family: 'Titillium Web', sans-serif;
 }
@@ -97,7 +97,7 @@ body {
   padding:var(--default-padding);
 }
 #blog-posts a {
-  color:var(--light-yellow-color);
+  color:var(--white-color);
 }
 
 .blog-topic p {
@@ -126,6 +126,10 @@ body {
 #logo { 
   width: 70vw;
   height: 60vh;
+}
+
+#logo path {
+  fill: var(--white-color);
 }
 
 #top-bar {
