@@ -154,12 +154,21 @@ body {
 
 #go-to-blog span:nth-child(1) {
   writing-mode: vertical-lr;
-  padding-bottom: 10px;
+}
+
+#go-to-blog strong {
+  display: none;
 }
 
 /*Responsive Media Queries*/
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
+  #go-to-blog strong {
+    display: inline;
+  }
+  #go-to-blog span:nth-child(1) {
+    padding-bottom: 10px;
+  }
   #logo { 
     height: 50vh;
     width: auto; 
@@ -168,7 +177,6 @@ body {
     display: block;
   }
   #main-background {
-    background-image: var(--background-image-main);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
