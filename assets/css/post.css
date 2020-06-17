@@ -33,7 +33,8 @@ body {
 }
 
 #post-logo {
-  height:64px;
+  width: 100%;
+  height:32px;
 }
 
 #post-logo path {
@@ -72,6 +73,14 @@ body {
 
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
+  #post-image img { 
+    width: auto;
+    height: 70vh;
+  }
+  
+  #post-logo {
+    height:64px;
+  }
   #post-text {
     padding:var(--default-padding);
   }
