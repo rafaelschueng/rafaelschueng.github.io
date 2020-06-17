@@ -42,7 +42,6 @@ body {
 
 #post-image img {
   position: relative;
-  height: 70vh;
   z-index: 2000;
 }
 
