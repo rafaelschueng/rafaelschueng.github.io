@@ -12,7 +12,7 @@
   --light-blue-color:#1885DA;
   --white-color:#ffffff;
   /* **backgrounds** */
-  --background-image-main:url("../../assets/images/backgrounds/vlcsnap-2020-06-16-12h43m28s487.png");
+  --background-image-main:url("https://res.cloudinary.com/djjkfuxvk/image/upload/v1592511986/background_image_jttddt.jpg");
   /* **fonts** */
   --default-font-size: 16px;
   /* **default padding** */
@@ -23,31 +23,6 @@
 
 ::selection {
   background-color: var(--medium-bg-color);
-}
-
-
-@keyframes BackgroundAnimationLeft {
-  0% {
-    background-position-x:left;
-  }
-  50% {
-    background-position-x:right;
-  }
-  100% {
-    background-position-x:left;
-  }
-}
-
-@keyframes BackgroundAnimationRight {
-  0% {
-    background-position-x:right;
-  }
-  50% {
-    background-position-x:left;
-  }
-  100% {
-    background-position-x: right;
-  }
 }
 
 html {
