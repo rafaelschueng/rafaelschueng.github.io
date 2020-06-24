@@ -39,7 +39,6 @@ twitter_link: "https://twitter.com/RafaelSchueng"
 permalink: /:title/
 
 # Build settings
-#theme: minima
 plugins:
   - jekyll-feed
 

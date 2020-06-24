@@ -11,12 +11,15 @@
   --light-green-color:#00ff8c;
   --light-blue-color:#1885DA;
   --white-color:#ffffff;
-  /* **backgrounds** */
-  --background-image-main:url("../../assets/images/backgrounds/vlcsnap-2020-06-16-12h43m28s487.png");
+  
   /* **fonts** */
   --default-font-size: 16px;
+  --dark-font-color:#001319;
+  --light-font-color:#fffff2;
+
   /* **default padding** */
   --default-padding:0 10vw;
+  
   /* ** z-index ** */
   --default-main-z-index:1000;
 }
@@ -26,7 +29,7 @@
 }
 
 body {
-  background-color:var(--medium-bg-color);
+  background-color:var(--dark-bg-color);
   color:var(--light-yellow-color);
   font-size: var(--default-font-size);
   font-family: 'Titillium Web', sans-serif;
@@ -34,7 +37,7 @@ body {
 
 #post-logo {
   width: 100%;
-  height:32px;
+  height:48px;
 }
 
 #post-logo path {
@@ -50,7 +53,7 @@ body {
 #post-image-background {
   position: absolute;
   width:100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
   filter: blur(1px) brightness(80%);
   background-size: cover;
@@ -59,32 +62,38 @@ body {
 }
 
 #post-text header {
-  margin:15px 0px;
   padding:10px 0 0 0;
   border-style: solid;
   border-width: 0 0 2px 0;
+  margin:0 0 10px 0;
 }
 
 #post-text {
   position: relative;
   z-index: 2000;
-  background-color: var(--medium-bg-color);
+  min-height: 50vh;
+  background-color: var(--dark-bg-color);
 }
 
+#post-navbar {
+  padding: 5px 5vw;
+}
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
-  #post-image img { 
+  #post-image img {
     width: auto;
-    height: 70vh;
+    height: 50vh;
   }
   
   #post-logo {
     height:64px;
   }
+
   #post-text {
     padding:var(--default-padding);
   }
+
   #post-navbar {
-    padding:var(--default-padding);
+    padding: 15px 10vw;
   } 
 }

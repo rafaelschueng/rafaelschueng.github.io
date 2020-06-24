@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Sobre Rafael Schüng
+title: Sobre
 permalink: /about/
 description: "Um pouco mais sobre Rafael Schueng."
 ---

@@ -1,4 +1,5 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
+{% if jekyll.environment == "production" %}
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -6,3 +7,4 @@
 
   gtag('config', 'UA-169832356-1');
 </script>
+{% endif %}

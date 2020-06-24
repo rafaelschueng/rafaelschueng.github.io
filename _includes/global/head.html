@@ -1,5 +1,3 @@
-<!-- GLOBAL INCLUDE -->
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169832356-1"></script>
 
@@ -31,7 +29,7 @@
 <meta property="og:description" content="{{page.description}}">
 <meta property="og:image" content="https://res.cloudinary.com/djjkfuxvk/image/upload/v1592431348/thumbnail_csfhp8.jpg">
 <meta property="og:url" content="{{site.url}}">
-<meta property="twitter:title" content="{{site.title}}">
+<meta property="twitter:title" content="{{page.title}}">
 <meta property="twitter:description" content="{{page.description}}">
 <meta property="twitter:image" content="https://res.cloudinary.com/djjkfuxvk/image/upload/v1592431348/thumbnail_csfhp8.jpg">
 
@@ -54,4 +52,10 @@
 <meta name="msapplication-TileImage" content="../../assets/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>{{ page.title | default: "Rafael Schüng"}}</title>
+<title>
+  {% if page.title %}
+    {{page.title}}
+  {% else %}
+    {{site.title}}
+  {% endif %}
+</title>

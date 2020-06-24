@@ -40,30 +40,39 @@
 <!-- BLOG POSTS -->
 {%- if site.posts.size > 0 -%}
 <div id="blog" class="container-fluid">
-  <div id="blog-posts" class="row h-100">
+  <div id="blog-title" class="row">
     <div class="col">
-      <div id="blog-title" class="row">
-        <div class="col">
-          <h1><i class="fas fa-blog"></i> Postagens</h1>
-        </div>
-        <div class="w-100"></div>
-      </div>
-      <br/>
-      <div class="row">
-        {%- for post in site.posts -%}
-            <div data-blog-post-image="{{post.related_image}}" class="col blog-topic">
-              <a target="_blank" href="{{post.url | relative_url}}">
-                <h3>
-                  <i class="fas fa-angle-right"></i> {{post.title}} - <small>{{post.date | date: "%b %-d, %Y" }}</small>
-                </h3>
-                {{post.content | truncatewords: 50}}
-              </a>
-            </div>
+      <h1><i class="fas fa-blog"></i> Postagens</h1>
+    </div>
+    <div class="w-100"></div>
+  </div>
+  <br/>
+  <div id="blog-posts" class="row">
+  {%- for post in site.posts -%}
+    <div class="col-lg-3 card-deck blog-post-card">
+      <div class="blog-post card">
+        {%- if post.related_image -%}
+          <img class="card-img-top" src="{{post.related_image}}" alt="{{post.title}}">
+        {%- endif -%}
+        <div class="card-body">
+          <h3 class="card-title">
+            <a target="_blank" href="{{post.url | relative_url}}">
+              {{post.title}}
+            </a>
+          </h3>
+          <p class="class-text">
+            <i class="far fa-calendar-alt"></i>  {{post.date | date: "%b %-d, %Y" }}
             <div class="w-100"></div>
-        {%- endfor -%}
+            {%- if post.description -%}
+              {{post.description | truncatewords: 50}}
+            {% else %}
+              {{post.content | truncatewords: 50}}
+            {%- endif -%}
+          </p>
+        </div>
       </div>
     </div>
+  {%- endfor -%}
   </div>
-  <div id="blog-post-related-image" class="row w-100 h-100"></div>
 </div>
 {%- endif -%}

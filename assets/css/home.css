@@ -11,12 +11,18 @@
   --light-green-color:#00ff8c;
   --light-blue-color:#1885DA;
   --white-color:#ffffff;
+
   /* **backgrounds** */
   --background-image-main:url("https://res.cloudinary.com/djjkfuxvk/image/upload/v1592511986/background_image_jttddt.jpg");
+
   /* **fonts** */
   --default-font-size: 16px;
+  --dark-font-color:#001319;
+  --light-font-color:#fffff2;
+
   /* **default padding** */
   --default-padding:20px 20px;
+  
   /* ** z-index ** */
   --default-main-z-index:1000;
 }
@@ -27,7 +33,7 @@
 
 html {
   /* FIXME */
-  overflow:hidden;
+  
 }
 
 body {
@@ -51,7 +57,7 @@ body {
   top: 0;
   position: absolute;
   width: 100%;
-  filter: blur(5px);
+  filter: blur(2px);
   overflow: hidden;
 }
 
@@ -64,32 +70,33 @@ body {
 
 #blog {
   height: 100vh;
-}
-#blog-posts {
-  position: absolute;
-  width: 100%;
-  z-index: 300;
   padding:var(--default-padding);
 }
-#blog-posts a {
-  color:var(--white-color);
+
+.blog-post a {
+  color:var(--dark-bg-color);
 }
 
-.blog-topic p {
-  display: none;
-  font-size: 1.2em;
-}
-.blog-topic:hover p {
-  display: block;
+.blog-post-card {
+  margin: 0 10px 0 10px;
+  padding: 0;
 }
 
-#blog-post-related-image {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  background-color: var(--medium-bg-color);
-  filter: blur(1px) brightness(40%);
+.blog-post-card img {
+  border-radius:0;
+}
+
+.blog-post-card .card {
+  border: none;
+}
+
+.blog-post-card .card-body {
+  background-color:var(--medium-bg-color);
+  color:var(--light-font-color);
+}
+
+.blog-post-card .card-body a {
+  color:var(--light-font-color);
 }
 
 #logo-container {
@@ -142,19 +149,36 @@ body {
 /*Responsive Media Queries*/
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
+
+  .blog-post-card {
+    margin: 10px 0px 10px 0px;
+  }
+
+  .blog-post-card img {
+    filter: brightness(60%);
+  }
+
+  .blog-post-card:hover img {
+    filter: brightness(100%);
+  }
+
   #go-to-blog strong {
     display: inline;
   }
+
   #go-to-blog span:nth-child(1) {
     padding-bottom: 10px;
   }
+
   #logo { 
     height: 50vh;
     width: auto; 
   }
+
   #main-background-video {
     display: block;
   }
+  
   #main-background {
     background-position: center;
     background-size: cover;
