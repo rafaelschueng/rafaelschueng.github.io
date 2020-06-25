@@ -81,8 +81,8 @@ body {
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
   #post-image img {
-    width: auto;
-    height: 50vh;
+    width: 60vw;
+    height: auto;
   }
   
   #post-logo {
