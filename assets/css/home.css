@@ -99,6 +99,10 @@ body {
   color:var(--light-font-color);
 }
 
+.blog-post-card .card-body p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 #logo-container {
   position: absolute;
   width: 100%;

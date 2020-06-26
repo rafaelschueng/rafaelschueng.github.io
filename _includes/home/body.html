@@ -60,9 +60,11 @@
               {{post.title}}
             </a>
           </h3>
-          <p class="class-text">
+          <p>
             <i class="far fa-calendar-alt"></i>  {{post.date | date: "%b %-d, %Y" }}
-            <div class="w-100"></div>
+          </p>
+          <div class="w-100"></div>
+          <p>
             {%- if post.description -%}
               {{post.description | truncatewords: 50}}
             {% else %}

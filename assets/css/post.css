@@ -18,7 +18,7 @@
   --light-font-color:#fffff2;
 
   /* **default padding** */
-  --default-padding:0 10vw;
+  --default-padding:0 15vw;
   
   /* ** z-index ** */
   --default-main-z-index:1000;
@@ -36,7 +36,7 @@ body {
 }
 
 #post-logo {
-  width: 100%;
+  width: auto;
   height:48px;
 }
 
@@ -62,6 +62,7 @@ body {
 }
 
 #post-text header {
+  font-family: 'Titillium Web', sans-serif;
   padding:10px 0 0 0;
   border-style: solid;
   border-width: 0 0 2px 0;
@@ -69,23 +70,23 @@ body {
 }
 
 #post-text {
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   z-index: 2000;
-  min-height: 50vh;
+  min-height: 60vh;
   background-color: var(--dark-bg-color);
 }
 
-#post-navbar {
-  padding: 5px 5vw;
-}
-
 @media screen and (min-width: 800px) and (min-height: 600px) {
+  
+
   #post-image img {
     width: 60vw;
     height: auto;
   }
   
   #post-logo {
+    width: auto;
     height:64px;
   }
 
@@ -94,6 +95,6 @@ body {
   }
 
   #post-navbar {
-    padding: 15px 10vw;
+    padding: 15px 15vw;
   } 
 }
