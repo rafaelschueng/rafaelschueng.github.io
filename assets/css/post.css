@@ -75,6 +75,7 @@ body {
   z-index: 2000;
   min-height: 60vh;
   background-color: var(--dark-bg-color);
+  padding: 0 15px 25px 15px;
 }
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
@@ -91,7 +92,7 @@ body {
   }
 
   #post-text {
-    padding:var(--default-padding);
+    padding: 0 15vw 25px 15vw;
   }
 
   #post-navbar {
