@@ -80,6 +80,9 @@ body {
   background-color: var(--dark-bg-color);
   padding: 0 15px 25px 15px;
 }
+#disqus_thread {
+  padding: 0 15px;
+}
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
   
@@ -95,6 +98,10 @@ body {
   }
 
   #post-text {
+    padding: 0 15vw 25px 15vw;
+  }
+
+  #disqus_thread {
     padding: 0 15vw 25px 15vw;
   }
 
