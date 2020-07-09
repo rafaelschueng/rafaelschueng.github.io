@@ -76,8 +76,8 @@ body {
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
   #post-image img {
-    /* width: 60vw; */
-    padding:0 15vw;
+    width: 70vw;
+    padding: 0;
     height: auto;
   }
   
