@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Bem vindo ao meu blog!"
+title:  "Bem-vindo ao meu blog!"
 date:   2020-07-07 07:00:00 -0300
-description: "Seja bem vindo ao meu blog. Este é o primeiro post deste blog. Aqui nessa postagem você acompanha porquê eu decidi abrir esse blog e como eu encaro esse desafio de desenvolver, manter e produzir conteúdo para ele."
+description: "Seja bem-vindo ao meu blog. Este é o primeiro post deste blog. Aqui nessa postagem você acompanha porquê eu decidi abrir esse blog e como eu encaro esse desafio de desenvolver, manter e produzir conteúdo para ele."
 categories: Boas Vindas.
 related_image: https://res.cloudinary.com/djjkfuxvk/image/upload/v1594168086/20200707_195930_hzt3hq.jpg
 ---
