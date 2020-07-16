@@ -1,0 +1,132 @@
+﻿DevOps: Instalando pacotes no Windows de forma automatizada.
+
+Em algum determinado momento após realizar uma instalação limpa do Windows, você deve ter tido o “desprazer” de instalar novamente todos os programas do seu computador. O problema é que você perde muito tempo instalando tudo e às vezes esse processo pode demorar horas ou até dias para poder ficar ao seu gosto. Eu pessoalmente mantenho alguns scripts guardados para quando eu termino minha instalação de qualquer distribuição Linux que eu faça a instalação na minha máquina de produção mas no Windows a gente não tem muitas opções disponíveis de gestores de pacotes e isso atrasa muito quando você precisa fazer uma instalação de algo ou precisa configurar um ambiente de desenvolvimento. Normalmente só temos uma escolha que é instalar tudo através daqueles ‘wizards’ malucos que as empresas que desenvolvem disponibilizam. Felizmente existem algumas formas de você instalar tudo usando algumas ferramentas que automatizam esse processo e te ajudam a se preocupar com 
+
+Algumas das ferramentas que eu vou apresentar usam Powershell como base ou foram desenvolvidas para o ecossistema .NET e abusam da linha de comando. Você deve estar familiarizado com o Powershell ou com alguma linha de comando para usar elas. Como dizem por aí: “Dez dedos no teclado são mais rápidos que dois no mouse...” 
+
+
+Chocolatey
+Chocolatey foi desenvolvido para suprir uma necessidade que o Windows tinha em relação as distros linux. Normalmente em qualquer distribuição linux você tem um gerenciador de pacotes o que mantém todo o sistema configurado e atualizado. Boa parte das distros linux são construídas em volta do gerenciador de pacotes porém o Windows não usa um gerenciador de pacotes. Aliás, o Windows tem um sistema de empacotamento porém não possuí algum gestor de pacotes. O que soa no mínimo estranho. Pensando nisso algumas pessoas se juntaram e construíram o Chocolatey se baseando no APT-GET(Sim. O próprio gestor de pacotes do Ubuntu, Linux Mint e muitas outras distribuições Debian-based). O Chocolatey é uma baita “mão na roda” para você sendo desenvolvedor de sistemas ou não e você pode instalar quase qualquer ferramenta de desenvolvimento apenas usando a linha de comando. Veja um exemplo abaixo de como instalar o NodeJS apenas usando 1 linha de comando:
+
+
+<EXEMPLO DE INSTALAÇÃO DO NODEJS PELO CHOCOLATEY>
+
+
+Viu só ?!? Parece até bobo de tão simples que é né ? Você pode até imaginar que está usando alguma distribuição linux como Ubuntu, Debian ou até mesmo Linux Mint, porém não está! se você gostou terá de instalar o chocolatey através da linha de comando antes instalar qualquer coisa através dele. Para isso você pode apenas instalar usando a seguinte linha de comando:
+
+<EXEMPLO DE INSTALAÇÃO DO CHOCOLATEY>
+
+
+Com o Chocolatey você pode não apenas instalar pacotes mas sim remover outros pacotes que são geridos pelo próprio e até mesmo atualizar tudo que foi instalado por ele. 
+
+
+<EXEMPLO DE REMOÇÃO DE PACOTE USANDO O CHOCOLATEY>
+
+
+E para atualizar um pacote você usa o seguinte comando: 
+
+<EXEMPLO DE ATUALIZAÇÃO DE PACOTE USANDO O CHOCOLATEY>
+
+
+Ou para atualizar todos os pacotes você executa o seguinte comando: 
+
+
+<EXEMPLO DE ATUALIZAÇÃO DE TODOS OS PACOTES O CHOCOLATEY>
+
+
+O Chocolatey é bem amigável. Você pode fazer muita coisa e ainda mais usando ele em conjunto ao Powershell. Você pode criar seus próprios scripts para automatizar caso você precise mudar de estação de trabalho ou computador pessoal, além disso o repositório do Chocolatey conta atualmente com 7680 pacotes até essa data de publicação deste post. 
+
+
+Existe também uma versão gráfica do Chocolatey que é o “Chocolatey GUI”. Ele é um porte para facilitar as coisas pra quem não gosta de usar linha comando e quiser algo mais “user-friendly” porém para usar ele você tem que ter o Chocolatey instalado e por linha de comando instalar o “Chocolatey GUI“ através desse comando: 
+
+
+<EXEMPLO DE INSTALAÇÃO DO CHOCOLATEY GUI>
+
+
+<EXEMPLO DO CHOCOLATEY GUI>
+
+
+NPackd 
+NPackd(Leia: “Unpacked”) é uma outra ferramenta de instalação automatizada de programas no Windows. Foi desenvolvida para ser um concorrente ao Chocolatey porém sendo mais semelhante ao Synaptic e distanciando da linha de comando. O NPackd é uma ferramenta ainda em desenvolvimento e tem algumas semelhanças em relação ao Chocolatey. Veja abaixo como instalar o Nodejs pelo no NPackd
+
+<EXEMPLO DE INSTALAÇÃO DO NODEJS PELO NPACKD>
+
+
+Para instalar o NPackd você executa apenas essa linha de comando no CMD:
+
+<EXEMPLO DO PROCESSO DE INSTALAÇÃO DO NPACKD>
+
+
+E para procurar pacotes no repositório do NPackd você pode usar o seguinte comando:
+
+<EXEMPLO DE PROCURA POR PACOTES COM O NPACKD>
+
+
+Se você quiser remover um pacote, você apenas usa o seguinte comando:
+
+<EXEMPLO DE REMOÇÃO DE PACOTES USANDO O NPACKD>
+
+Apesar de acima eu falar da linha de comando. O NPackd tem como trunfo a sua interface gráfica que é bem semelhante a outro software conhecido como Synaptic. 
+No modo gráfico, você pode fazer qualquer alteração da mesma forma que faria usando o Npackd por linha de comando.
+
+<IMAGEM DO  NPACKD GUI>
+
+
+
+
+Scoop
+Scoop é um gestor de pacotes totalmente baseado em Powershell. Eu poderia descrever ele como um conjunto de scripts feitos para gerir pacotes instalados no sistema. É muito útil assim como o Chocolatey e o Npackd.
+Scoop ainda está em desenvolvimento porém ele se tornou base para outro package manager que está sendo desenvolvido pela Microsoft. Ele tem funções básicas assim como o Npackd e o Chocolatey. Você pode instalar, remover, atualizar todos os seus pacotes assim como nos outros dois citados acima. Abaixo você pode ver como instalar o NodeJS usando o Scoop:
+
+
+<EXEMPLO DE COMO INSTALAR O NODEJS COM O SCOOP>
+
+
+Para instalar o Scoop você só precisa digitar uma linha de comando: 
+
+<EXEMPLO DE INSTALAÇÃO DO SCOOP>
+
+
+Para procurar um pacote no repositório você apenas usa o seguinte comando:
+
+
+<EXEMPLO DE PESQUISA DE PACOTE NO SCOOP>
+
+
+Para remover um pacote usando o Scoop você faz assim:
+
+
+<EXEMPLO DE REMOÇÃO DE PACOTE USANDO O SCOOP>
+
+
+O Scoop é rústico de certa forma. Ele ainda está em desenvolvimento e isso significa que ele conta com pouquíssima coisa e tem apenas o modo texto para a manipulação dos pacotes, dependências e etc… É bem semelhante a gestores de pacote do universo Linux.
+
+
+Winget
+Winget (É um acrônimo para “Windows Package Manager Client”). Ele é a nova aposta da Microsoft para os desenvolvedores e mantenedores de sistemas para instalar, manter e gerenciar pacotes. Ele foi desenvolvido usando todas ou senão quase todas as características dos gerenciadores de pacotes acima e está sendo escrito em C++, Python, C# e BASH(Sim amigos! A gente viveu o suficiente para ver a microsoft usar BASH em suas aplicações!). Seu repositório é baseado num repositório de manifests do Github e tem poucos softwares e só está disponível para os desenvolvedores do Windows. Não se sabe muito sobre ele e como ele vai funcionar no futuro mas sabe-se que ele está na versão 1.0 até agora e tem poucos pacotes se comparado aos três gestores acima. Você pode ver como é simples instalar um pacote como o NodeJS no exemplo abaixo:
+
+<EXEMPLO DE PACOTE SENDO INSTALADO PELO WINGET >
+
+
+Para instalar o Winget você tem que estar participando do programa de desenvolvimento do Windows conhecido como “Windows Insider” e instalar uma aplicação conhecida como “App Installer” na loja Microsoft Store(Que loucura né? Um gestor de programas dentro de um gestor de pacotes… INCEPTION!!!)
+
+
+<EXEMPLO DE INSTALAÇÃO DO WINGET ATRAVÉS DA MICROSOFT STORE>
+
+
+E para pesquisar um pacote relacionado ao Winget basta apenas usar o seguinte comando: 
+
+
+<EXEMPLO DE PACOTE SENDO PROCURADO PELO WINGET>
+
+
+Se você desejar remover um pacote pelo Winget, você usa o seguinte comando:
+
+<EXEMPLO DE REMOÇÃO DE PACOTE USANDO O WINGET>
+
+
+O Winget está em desenvolvimento e é uma das grandes promessas da Microsoft para este ano ainda. Você pode usar ele conforme demonstrado acima porém seu repositório é pequeno e está em constantes mudanças. É uma excelente ferramenta mesmo chegando bem tarde se comparado aos gestores de pacotes acima… Porém é uma ferramenta oficial da própria Microsoft e tende a ser adotada com muito mais força do que os outros gestores de pacotes descritos acima. 
+
+
+Qual é o melhor ?
+Bem, conforme você leu acima. Todos possuem funções básicas para instalar, remover, atualizar e gerir os pacotes de forma bem elegante, segura e sem quaisquer dores de cabeça que você possa ter. Todos são bons, porém eu recomendaria você visitar os repositórios de ambos e verificar se a coleção de software lhe atende. Eu pessoalmente trabalhei muito com o Chocolatey porquê sempre tive muita facilidade para instalar tudo que eu preciso com ele e seu repositório com mais de 7.000 programas e focado desenvolvedores em suma maioria, facilita meu trabalho diário. Eu não tenho nenhuma reclamação contra essa gestor de pacotes, aliás… Eu acho que ele deveria ter sido adotado pela Microsoft bem antes deles desenvolverem o Winget, já que é um programa bem conhecido na própria comunidade .NET e entre os usuários do Nuget (“because everyone loves Chocolatey nougat”). Enfim, você pode usar um gestor de pacotes ao seu gosto e que lhe atenda bem.

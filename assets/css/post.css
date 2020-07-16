@@ -57,7 +57,7 @@ body {
   margin:0 0 10px 0;
 }
 
-#post-text a {
+#post-text p a {
   color:var(--light-font-color);
   text-decoration:underline;
 }
