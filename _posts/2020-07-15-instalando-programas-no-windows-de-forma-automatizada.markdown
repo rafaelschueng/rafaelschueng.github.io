@@ -15,11 +15,13 @@ Algumas das ferramentas que eu vou apresentar usam Powershell como base ou foram
 <br/>
 
 ### **Chocolatey**
-Chocolatey foi desenvolvido para suprir uma necessidade que o Windows tinha em relação as distros linux. Normalmente em qualquer distribuição linux você tem um gerenciador de pacotes o que mantém todo o sistema configurado e atualizado. Boa parte das distros linux são construídas em volta do gerenciador de pacotes porém o Windows não usa um gerenciador de pacotes. Aliás, o Windows tem um sistema de empacotamento porém não possuí algum gestor de pacotes. O que soa no mínimo estranho. Pensando nisso algumas pessoas se juntaram e construíram o Chocolatey se baseando no APT-GET(Sim. O próprio gestor de pacotes do Ubuntu, Linux Mint e muitas outras distribuições Debian-based). O Chocolatey é uma baita “mão na roda” para você sendo desenvolvedor de sistemas ou não e você pode instalar quase qualquer ferramenta de desenvolvimento apenas usando a linha de comando. Veja um exemplo abaixo de como instalar o NodeJS apenas usando 1 linha de comando:
+O Chocolatey foi desenvolvido para suprir uma necessidade que o Windows tinha em relação as distribuições Linux. Normalmente em qualquer distribuição Linux você tem um gerenciador de pacotes o que mantém todo o sistema configurado e atualizado. Boa parte das distros Linux são construídas em volta do gerenciador de pacotes porém o Windows não usa um gerenciador de pacotes. Aliás, o Windows tem um sistema de empacotamento porém não possuí algum gestor de pacotes. O que soa no mínimo estranho. Pensando nisso algumas pessoas se juntaram e construíram o Chocolatey se baseando no APT-GET(Sim. O próprio gestor de pacotes do Ubuntu, Linux Mint e muitas outras distribuições Debian-based). O Chocolatey é uma baita “mão na roda” para você sendo desenvolvedor de sistemas ou não e você pode instalar quase qualquer ferramenta de desenvolvimento apenas usando a linha de comando. Veja um exemplo abaixo de como instalar o NodeJS apenas usando 1 linha de comando:
 
 <script src="https://gist.github.com/rafaelschueng/15e27422387d8b82c717c9b7761925f7.js"></script>
 
-Viu só ?!? Parece até bobo de tão simples que é né ? Você pode até imaginar que está usando alguma distribuição linux como Ubuntu, Debian ou até mesmo Linux Mint, porém não está! se você gostou terá de instalar o Chocolatey através da linha de comando antes instalar qualquer coisa através dele e para isso você precisará abrir o Powershell em modo administrativo e executar o seguinte script:
+Viu só ?!? Parece até bobo de tão simples que é né ? Você pode até imaginar que está usando alguma distribuição Linux como Ubuntu, Debian ou até mesmo Linux Mint, porém não está! 
+
+Se você gostou terá de instalar o Chocolatey através da linha de comando antes instalar qualquer coisa através dele e para isso você precisará abrir o Powershell em modo administrativo e executar o seguinte script:
 
 <script src="https://gist.github.com/rafaelschueng/653ac93daae3cbbc99e6c725ea7761e4.js"></script>
 
