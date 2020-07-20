@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Papo Sério: Como começar (ou voltar) a estudar programação"
+title:  "Papo Sério: Como começar (ou voltar) a estudar programação [PARTE 1] "
 date:   2020-07-17 00:00:00 -0300
 description: "Nesta pandemia você deve estar vendo uma galera por aí falando que programar é fácil e que você ganhará milhões de reais depois de inventar próprio “Uber de alguma coisa” porém a vida não é fácil. E as coisas que vem fácil nem sempre são boas. Então eu decidi fazer essa postagem para auxiliar aqueles que precisam ou querem aprender a programar. "
 categories: "Learning"
