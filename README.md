@@ -4,7 +4,6 @@ Acesse em https://rafaelschueng.github.io
 
 Ainda em desenvolvimento. Sinta-se a vontade para modificar e alterar todo o projeto.
 
-
 Feito com Jekyll, CSS, HTML, Bootstrap e JQuery.
 
 #### Branches
